@@ -9,7 +9,7 @@
 /* variables */
 :root{
     --color-button:rgb(31, 3, 63);
-    --color-fondo-imagenes: rgba(22, 1, 46, 0.7);
+    --color-fondo-imagenes: rgba(22, 1, 46, 0.6);
     --color-button-hover: rgb(94, 41, 192);
     --color-text1: #030436;
     --color-text2: rgb(255, 251, 251);
@@ -320,10 +320,10 @@ body{
         @media screen and (max-width: 765px){
             /* menu desplegable */
             .menu{
-                display: inline-block;
+                display: block;
                 position: absolute;
                 top: 5px;
-                right: -50%;
+                left: -50%;
                 background-color: rgba(0,0,0, .8);
                 width: 50%;
                 margin-top: 50px;
@@ -469,6 +469,7 @@ body{
     position: absolute;
     bottom: 0;
     background: var(--color-button);
+    color: var(--color-text2);
     width: 100%;
     padding: 25px 150px;
 }
@@ -667,8 +668,8 @@ body{
 .cuadro2{
     background:center/cover;
     background-image: linear-gradient(
-      rgba(22, 1, 46, 0.7),
-      rgba(22, 1, 46, 0.7)),
+      rgba(22, 1, 46, 0.6),
+      rgba(22, 1, 46, 0.6)),
     url(imagenes/cuadro.jpg);
     color: var(--color-text2);
 }
@@ -686,11 +687,12 @@ body{
 .advise{
     background:  center/cover no-repeat;
     background-image: linear-gradient(
-        rgba(30, 0, 30, 0.7),
-        rgba(30, 0, 30, 0.7)),
+        rgba(30, 0, 30, 0.65),
+        rgba(30, 0, 30, 0.65)),
       url(imagenes/segundo-banner.jpg);
     text-align: center;
     padding: 50px;
+    color: var(--color-text2);
 }
 
 @media screen and (max-width: 640px){
@@ -805,6 +807,11 @@ body{
     padding: 0 100px;
 }
 
+@media screen and (max-width: 1100px){
+    .div-industries{
+        padding: 0;
+    }
+}
 
 @media screen and (max-width: 900px){
     .div-industries{
@@ -996,7 +1003,7 @@ body{
     justify-content: space-around;
     align-items: center;
     position: absolute;
-    bottom: -64px;
+    bottom: -100%;
     transition: all .3s linear;
     -webkit-transition: all .3s linear;
     -moz-transition: all .3s linear;
@@ -1056,6 +1063,7 @@ body{
     width: 100%;
     padding: 50px 50px 70px;
     text-align: center;
+    color: var(--color-text2);
     background: center/cover no-repeat fixed;
     background-image: linear-gradient(
         var(--color-fondo-imagenes),
@@ -1131,13 +1139,14 @@ body{
     height: 80px;
 }
 
-@media screen and (max-width: 650px){
+@media screen and (max-width: 800px){
     .marcas-figure{
         padding: 10px 30px;
     }
 
     .marcas-figure img{
-        padding: 10px 20px;
+        width: 220px;
+        padding: 10px;
     }
 }
 
@@ -1145,6 +1154,7 @@ body{
 .footer{
     background: var(--color-button);
     text-align: center;
+    color: var(--color-text2);
 }
 
 /* titulo de pie de pagina */
@@ -1186,19 +1196,19 @@ body{
     text-align: left;
 }
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1100px){
     .footer-cuadros{
         width: 100%;
         padding: 20px;
     }
 
-    @media screen and (max-width: 850px){
+    @media screen and (max-width: 900px){
         .footer-cuadros{
             grid-template-columns: repeat(2, 1fr);
         }
     }
 
-    @media screen and (max-width: 580px){
+    @media screen and (max-width: 600px){
         .footer-cuadros{
             grid-template-columns: 1fr;
             justify-items: center;
@@ -1362,7 +1372,7 @@ body{
     text-transform: uppercase;
 }
 
-@media screen and (max-width: 350px){
+@media screen and (max-width: 800px){
     .pie-footer{
         grid-template-columns: 1fr;
         grid-gap: 10px;
