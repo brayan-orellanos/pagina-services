@@ -402,7 +402,7 @@ body{
     top: 30%;
     left: 20%;
     font-size: 2rem;
-    color: var(--color-text1);
+    color: var(--color-text2);
     transform: translateX(-20%) translateY(-50%);
     -webkit-transform: translateX(-20%) translateY(-50%);
     -moz-transform: translateX(-20%) translateY(-50%);
